@@ -23,32 +23,27 @@ def calcular_perimetro(tupla):
     return calcular_distancia((tupla[0], tupla[1])) + calcular_distancia((tupla[1], tupla[2])) + calcular_distancia((tupla[0], tupla[2]))
 
 def actividad_1():
-    while True: 
-        tupla_1 = (leer_punto(1), leer_punto(2))
-        
-        print(f"La distancia entre los puntos es: {calcular_distancia(tupla_1)}")
-        
-        pendiente = calcular_pendiente(tupla_1)
-        print(f"La pendiente de la recta es: {pendiente}")
-        if pendiente == 0:
-            print("La pendiente es horizontal")
-        elif tupla_1[0][0] == tupla_1[1][0]:
-            print("La pendiente es vertical")
-        else:
-            print("La pendiente es inclnada")
-        print()
-        
-        tupla_2 = (tupla_1[0], tupla_1[1], leer_punto(3))
+    tupla_1 = (leer_punto(1), leer_punto(2))
+    
+    print(f"La distancia entre los puntos es: {calcular_distancia(tupla_1)}")
+    
+    pendiente = calcular_pendiente(tupla_1)
+    print(f"La pendiente de la recta es: {pendiente}")
+    if pendiente == 0:
+        print("La pendiente es horizontal")
+    elif tupla_1[0][0] == tupla_1[1][0]:
+        print("La pendiente es vertical")
+    else:
+        print("La pendiente es inclnada")
+    print()
+    
+    tupla_2 = (tupla_1[0], tupla_1[1], leer_punto(3))
 
-        print(f"El perimetro del triangulo es: {calcular_perimetro(tupla_2)}")
+    print(f"El perimetro del triangulo es: {calcular_perimetro(tupla_2)}")
 
-        lista = [tupla_2[0], tupla_2[1], tupla_2[2]]
-        print(f"Lista de puntos: {lista}")
+    lista = [tupla_2[0], tupla_2[1], tupla_2[2]]
+    print(f"Lista de puntos: {lista}")
 
-        print("\nDesea continuar? (s/n)")
-        if input("-> ") == "n":
-            break
-        print()
 
 def actividad_2():
     print("Ingrese un número entero positivo: ")
