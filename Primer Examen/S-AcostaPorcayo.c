@@ -7,7 +7,7 @@ typedef struct Programa {
 } Programa;
 
 void mostrarContenido(Programa array[10], int tamanio) {
-    for(int i = 0; i < 4; i ++) printf("%d\t%s\n", array[i].idProg, array[i].descProg);
+    for(int i = 0; i < tamanio; i ++) printf("%d\t%s\n", array[i].idProg, array[i].descProg);
 }
 
 int main() {
