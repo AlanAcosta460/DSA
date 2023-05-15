@@ -58,14 +58,18 @@ def main():
     print(f'Marca: {marcas[np.argmax(matriz) // 3]}\tMes: {meses[(np.argmax(matriz)) % 3]}')
 
     # Gráfico de linea con los datos de la matriz porcentaje_marca
-    # TODO Mostrar la grafica de la matriz porcentaje_marca
-    # x =
-    # y =
-    # plt.plot(x, y)
-    # font1 = {'family':'serif','color':'green','size':20}
-    # plt.title("Porcentaje de contribución (por marca)", fontdict = font1, loc='center')
-    # plt.grid()
-    # plt.show()
+    print('\n*** Gráfico de linea del % de contribución (por mes) ***')
+    x = np.arange(3)
+    for i in range(0, 5):
+        plt.plot(x, porcentaje_marca[i], label=marcas[i])
+    font1 = {'family':'serif','color':'green','size':20}
+    plt.title("Porcentaje de contribución (por marca)", fontdict = font1, loc='center')
+    plt.xticks(x, meses)
+    plt.xlabel('Meses')
+    plt.ylabel('Porcentaje')
+    plt.legend()
+    plt.grid()
+    plt.show()
 
     # Datos de la matriz original guardados en un archivo
     print('\n*** Se guardo la matriz original en un archivo ***')
