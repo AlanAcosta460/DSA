@@ -45,6 +45,7 @@ int main() {
         return 1;
     }
 
+    printf("\nEl array ordenado se guardo en el archivo T10-D-AcostaP-GutierrezG.txt\n");
     for(int i = 0; i < 10; i ++)
         fprintf(file, "%s\n", array[i]);
     fclose(file);
